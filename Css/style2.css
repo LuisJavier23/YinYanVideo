@@ -1,0 +1,703 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+body{
+    background-image: url("images/dark_geometric.png");
+} /*trate de agregar el fondo pero no lo carga :'c*/
+
+.container{
+    min-width: 50%;
+    max-width: 100%;
+}
+.containerL{ /*Luis Modifico*/
+    background-color:#838383;
+    color:#C5C5C5;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    padding: 5px;
+}
+
+.containerN{
+    background-color:#313131;
+    padding: 5px;
+}
+
+#contNav{
+    display: none;
+}
+
+.logo{
+    object-fit: scale-down;
+    width: 10%;
+    height: auto;
+    position: relative;
+    top: 15px;
+}
+
+.logo-special{
+    object-fit: scale-down;
+    width: 40%;
+    height: auto;
+    position: relative;
+    bottom: 2px;
+}
+
+.login, .search, .register{
+    display: inline-block;
+}
+.block-left{ /*Luis Modifico*/
+    position: relative;
+    float:left;
+    bottom: 18px;
+}
+.block-left-special{
+    float: left;
+    position:relative;
+    top: 5px;
+}
+
+header input[type=text], header input[type=email], header input[type=password]{
+    height:25px;
+    max-width: 65%;
+    font-size: 14px;
+}
+
+.block-right{ /*Luis Modifico*/
+    float: right;
+    position: relative;
+    bottom: 60px;
+}
+
+.block-center{
+    margin: auto;
+    width: 8%;
+    padding: 2px;
+    position: relative;
+    left: 25px;
+}
+
+nav{
+    display:inline-block;
+    width: 40%;
+}
+
+.containerB, .containerVideo{ /*Luis Modifico*/
+	border: 0.5px solid black;
+	margin: 0.2cm 0.2cm 0.2cm 0.2cm;
+	padding: 5px;
+	align-content: center;
+    text-align: center;
+    opacity: 0.9;
+    background-color:#C5C5C5;
+    position:relative;
+}
+
+.video{
+    background-color: #000000;
+    padding-top: 30px;
+    padding-right: .20px;
+    padding-bottom: 30px;
+    padding-left: .20px;
+    color:#FFFFFF;
+}
+
+.video img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.containerGeneral{
+	margin: auto;
+    width: 35%;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-color:#989898;
+    opacity: 0.8;
+    margin-top: 60px;
+    border: 3px solid #C5C5C5;
+
+}
+.containerGeneral, .containerR{
+    color:#000000;
+}
+
+.containerLogin, .containerSubir, .ContainerDaVideo{
+    margin: auto;
+    width: 35%;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-color:#989898;
+    opacity: 0.8;
+    margin-top: 100px;
+    color:#000000;
+    border: 3px solid #C5C5C5;
+}
+
+.ContainerDaVideo{
+    margin-top:25px;   
+}
+article{
+    display: inline-block;
+    width: 32%;
+}
+
+.containerN a:link, .containerN a:visited,
+.register a:link, .register a:visited,
+.question a:link, .question a:visited{
+    color:#C5C5C5;
+}
+
+.containerN a:hover, .containerN a:active,
+.register a:hover, .register a:active,
+.question a:hover, .question a:active{
+    color: #383838;
+}
+
+.buttonRegister a:link, .buttonRegister a:visited, 
+.buttonLogin a:link, .buttonLogin a:visited {
+    background-color: #6A6A6A;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.buttonReturn a:link, .buttonReturn a:visited, #btnNav, #btnSubs, #btnEditar,#btnAdministrar{
+    background-color: #6A6A6A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+.buttonRegister a:hover, .buttonRegister a:active, 
+.buttonLogin a:hover, .buttonLogin a:active, 
+.buttonReturn a:hover, .buttonReturn a:active{
+    background-color: #353535;
+}
+
+input[type=text]:focus, input[type=submit]:focus, input[type=password]:focus, 
+input[type=email]:focus, input[type=date]:focus, select:focus{
+    outline-color: #393939;
+}
+
+select {
+    border: none;
+    border-radius: 4px;
+    background-color: #DADADA;
+}
+
+input[type=submit], input[type=button]{
+    padding:10px 20px; 
+    background: #6A6A6A; 
+    color: white;
+    border:0 none;
+    cursor:pointer;
+}
+
+.imagPerf {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#portadaPerf {
+    object-fit: cover;
+    object-position: 0 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.portraitCrop{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width:1855px;
+    height: 400px;
+    overflow:hidden;
+    border: 10px solid white; 
+}
+
+#avatarPerf{
+    position:relative;
+    right: 70px;
+    top: 30px;
+} /*NEW*/
+#avaImg { /*Modificado por Luis*/
+    position: absolute;
+    bottom: 20px;
+    right: 70px;
+    border: 5px solid gray;
+    background-color: #000000;
+    height: 150px;
+    width: 150px;
+} /*NEW*/
+
+#avaInfo{
+    position: absolute;
+    right: 95px;
+    bottom: -15px;
+} /*NEW*/
+
+#btnSubs{
+    position: absolute;
+    right:135px;
+    top: 440px;
+}
+
+#btnSubs2{
+    position: relative;
+    right:135px;
+    top: 440px;
+}
+
+#btnEditar{
+    position: absolute;
+    left: 300px;
+    top: 29px;
+}
+
+#btnAdministrar{ /*Agregado por Luis*/
+    position: absolute;
+    left: 430px;
+    top: 29px;
+}
+
+#infoUsu, #favUsu, #subsUsu, #btnSubs, #subidosUsu, #btnEditar, 
+#listaVid,#btnAdministrar,
+.busqTitulo, .videoBusqList, .videoBusq,
+.editarTitulo, .editarCampos, #RegresarPerfil, .adminSec, .listaReporte{
+    text-align: left;
+}
+
+#infoUsu{
+    position: relative;
+}
+
+#subsUsu, #favUsu, #infoUsu, #subidosUsu, #listaVid, 
+.busqTitulo, .filtro, .perfBusqList, .videoBusqList,
+.editarTitulo, .editarCampos, .adminSec, .agregarComent{
+    width:95%;
+    margin: 0 auto;
+}
+
+.editarCampos{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nombreSubPerf, .nombreFavPerf, .nombreSubiPef, .nomListaVid, .nombreUsuRep, .imgRep{
+    text-align:center;
+}
+
+.subsPerf, .favPerf, .subiPerf, 
+.cdUsu, .paisUsu, .fecNamUsu, .fecRegiUsu,
+.videoEnLista, .vidFechaSubido, .vidViews,
+.filtroTxt, .filtro select,
+#avaBusq, .perfBusqTxt, .perfBusq,
+.videoBusq, .iconVideoBusq, .videoBusqTxt, .nomVidBusq, 
+.fecVidStatic, .fecVidEdit, 
+.campoDatos, .campoImg, .campoCorreo, .campoContra, .campoPregunta, 
+.iconVideoBlo, .videoBloqTxt, .nomVidBloq, .fecVidBloqStatic, .fecVidBloqEdit,
+.videoBloq, .perfBloq, .perfBloqTxt, 
+.perfComen, .perfComentario, .containerLikes, .containerViews, .containerDislikes , .containerFavorito,
+.editarVidLista, .borrarVidLista, #descVid, #usuVid, .imgRep, .razonRepUsu{
+    display: inline-block;
+} /*NEW*/
+
+.subIconsPerf{
+    background-color:#fff;
+    border:3px solid #FCFCFC;   
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#avaBusq, #iconPerfBloq{
+    background-color:#fff;
+    border:3px solid #606060;   
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    margin-left: 20px;
+    margin-right: 20px;   
+}
+
+#iconPerfBloq2{
+    background-color:#fff;
+    border:3px solid #606060;   
+    height:75px;
+    width:75px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.paisUsu, .cdUsu, .fecRegiUsu{
+    margin-left:100px;
+}
+
+.favIconsPerf, .subiIconsPerf {
+   width:170px;
+   height:110px;
+   border:3px solid #303030;
+   border-radius:2%;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+#seccionesPerf{
+    position:relative;
+}
+
+.vidIconLista, .iconVideoBusq, .iconVideoBloq{
+    width:230px;
+    height:170px;
+    border:3px solid #303030;
+    border-radius:2%;
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+
+.iconVideoBloq2{
+    width:230px;
+    height:170px;
+    border:3px solid #303030;
+    border-radius:2%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom:  65px;
+ }
+
+ .iconVideoBusq{
+     margin-top: 20px;
+ }
+
+ .vidViews, .vidFechaSubido{
+     width:49%;
+     margin: 0 auto;
+     position: relative;
+     bottom: 50px;
+ }
+
+ .nomListaVid{
+     position: relative;
+     bottom: 20px;
+ }
+
+.vidViews{
+    position: relative;
+    left: 35px;
+}
+
+.vidFechaSubido{
+    position: relative;
+    left: 60px;
+}
+
+#filterPerf, #filterBusq{
+    height: 30px;
+    font-size: 20px;
+}
+
+#filterPerf{
+    position: absolute;
+    right: 200px;
+    top: 422px;
+}
+
+#filterBusq{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+.filtroTxtList{
+    position: absolute;
+    right: 340px;
+    top: 413px;
+}
+
+.filtroTxtBusq{/*Mod Luis*/
+    right: 240px;
+    top: 10px;
+    margin: 20px;
+}
+
+.perfBusqTxt, .perfComTxt{
+    position: relative;
+    bottom: 50px;
+}
+
+.perfBusq, .videoBusq, .agregarComent{
+    margin-right:30px;
+    margin-left:30px;
+    margin-top: 20px;
+}
+
+.perfBusqList{
+    border: 3px solid;
+}
+
+.videoBusqTxt{
+    position: relative;
+    bottom:20px;
+}
+
+.campoDatos, .campoImg, .campoCorreo, .campoContra, .campoPregunta{
+    margin-right:50px;
+}
+
+.campoDatos{
+    margin-bottom: 50px;
+    
+}
+
+.campoName, .campoFecNam, .campoGenero, .campoPais, 
+.campoCiudad, .confirmContraCorreo, .campoCorreoNuevo,
+.campoPassOld, .campoPassFirst, .campoPassConfirm,
+.confirmContraPreg, .campoPreg, .campoResp{
+    margin-bottom:15px;
+}
+.campoPerfil, .campoPortada, .agregarComent{
+    margin-bottom:17px;
+}
+
+.campoImg input[type=button]{
+    margin-top:100px;
+    margin-bottom:20px;
+}
+
+.campoCorreo input[type=button]{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+#RegresarPerfil{
+    margin-left:1000px;
+    margin-bottom: 30px;
+    width:100px;
+    height:50px;
+    font-size:15px;
+}
+
+.videoBloqTxt{
+    position: relative;
+    bottom: 25px;
+}
+
+.vidRazonBloq, .mensBloq, .perfRazonBloq{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#razonBV, #razonBP{
+    font-size:14px;
+}
+
+.mensBloq label{
+    position: relative;
+    bottom: 60px;
+}
+
+#btnBloq, #btnNoBloq, #btnBloqPerf, #btnNoBloqPerf{
+    margin-bottom:20px;
+    margin-left: 30px;
+}
+
+.videoBloq, .perfBloq{
+    width:49%;
+    margin: 40px;
+}
+
+.perfBloqTxt{
+    position: relative;
+    bottom: 50px;
+}
+
+.containerComentarios{ /*Modificado por Luis*/
+    border: 0.5px solid black;
+    margin: 0.2cm 0.2cm 0.2cm 0.2cm;
+    padding: 5px;
+    opacity: 0.9;
+    background-color:#C5C5C5;
+    position:relative;
+}
+
+.containerViews{
+    margin-right:140px;
+}
+
+.containerVLD, .descriptionVideo{
+    position: relative;
+    bottom: 40px;
+}
+
+#btnComentario{
+    margin-left:360px;
+}
+
+.SDescripption label{
+    position: relative;
+    bottom:125px;
+}
+
+
+/* Agreagado por Luis */
+
+.alertmessage
+{
+    font-size: 25px;
+    color :green;
+}
+
+
+.errormessage
+{
+    font-size: 25px;
+    color :red;
+}
+.Foto_Perfil
+{ 
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    position: relative;
+    top: 0px;
+    margin-left:10px;
+
+} /*NEW*/
+
+.box_right
+{
+  float: right;
+    position: relative;
+    bottom: 20px;
+}
+
+.username_text
+{    
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  bottom: 10px;
+  color: #000000;
+  
+} /*NEW*/
+
+/* atena murio aqui */
+.botonesLista{
+    position: relative;
+    bottom: 60px;
+    left: -38px;/*Antes 20px -Luis*/
+} /*NEW*/
+
+.borrarVidLista{
+    position: relative;
+    left: 75px;
+} /*NEW*/
+
+.vidIconEditar{
+    width:300px;
+    height:240px;
+    border:3px solid #303030;
+    border-radius:2%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#descVid{
+    width: 220px;
+} /*NEW*/
+
+#usuVid, #descVid{
+    margin-top: 10px;
+    margin-bottom: 30px;
+} /*NEW*/
+
+#descVid{
+    margin-bottom: -40px;
+} /*NEW*/
+
+#txtReporte, #btnReporte{
+    display:block;
+    margin-left:400px;
+    margin-top:10px;
+} /*NEW*/
+
+#btnReporte{
+    margin-left:890px;
+} /*NEW*/
+
+
+.contVideo{
+    border: 0.5px solid black;
+	margin: 0.2cm 0.2cm 0.2cm 0.2cm;
+	padding: 5px;
+	align-content: center;
+    text-align: center;
+    background-color:#C5C5C5;
+    position:relative;
+} /*NEW*/
+
+#infoUsu{
+	font-style: oblique;
+	font-size: 20px;
+}
+
+.listaReporte{
+    margin: 1cm;
+}
+
+.imgRep{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    vertical-align:middle;
+}
+
+.razonRepUsu{
+    font-size: 30px;
+    margin-left: 35px;
+    width:450px;
+    vertical-align: middle;
+}
+
+.reportado{
+    display: inline-block;
+    margin-left:100px;
+    margin-right:50px;
+}
+
+.imgRep .subIconsPerf{
+    height: 150px;
+    width: 150px;
+}
+
+.nombreUsuRep{
+    font-size:20px;
+}
